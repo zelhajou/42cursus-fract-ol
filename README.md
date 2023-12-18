@@ -1,7 +1,9 @@
-# Fract'ol
+# Fract-ol
 
 ## Description
-Fract'ol is a computer graphics exploration project centered around the beauty and complexity of fractals. Using the C programming language and the [MiniLibX](https://harm-smits.github.io/42docs/libs/minilibx) library, this project aims to render stunning visual representations of the Julia and Mandelbrot fractal sets. It serves as a practical application of complex numbers, computer graphics optimization, and event handling in graphics programming.
+- Fract-ol is a computer graphics exploration project centered around the beauty and complexity of fractals. Using the C programming language and the [MiniLibX](https://harm-smits.github.io/42docs/libs/minilibx) library, this project aims to render stunning visual representations of the Julia and Mandelbrot fractal sets. It serves as a practical application of complex numbers, computer graphics optimization, and event handling in graphics programming.
+
+- The fract-ol project from the 42 School is one of the three "beginner" graphical projects of the cursus. It teaches you about manipulating a low-level graphic library, advanced math, and more.
 
 ## Installation
 To install Fract'ol, clone the repository and compile the source code using the provided Makefile.
