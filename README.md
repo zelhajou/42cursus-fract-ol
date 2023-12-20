@@ -23,8 +23,6 @@ Run the program with the following command:
 Replace **[fractal-type]** with either **Julia** or **Mandelbrot** to view the respective fractal set. Use mouse and keyboard inputs to zoom, adjust color depth, and explore the fractals.
 
 ## Features
-<!--
 - Render Julia and Mandelbrot fractal sets
 - Dynamic zoom and color depth adjustment
 - Real-time interaction with fractal parameters
--->
