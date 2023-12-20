@@ -3,3 +3,4 @@ obj/:
 	@mkdir -p obj
 fractol
 .DS_Store
+*.o
