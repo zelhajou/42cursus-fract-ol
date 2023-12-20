@@ -1,3 +1,6 @@
+
+![ascii-text-art (3)](https://github.com/zelhajou/fractol/assets/39954629/bd7a3afd-9214-414b-802f-d675db1a33ed)
+
 # Fract-ol
 
 ## Description
