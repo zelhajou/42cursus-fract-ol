@@ -4,3 +4,4 @@ obj/:
 fractol
 .DS_Store
 *.o
+.vscode/settings.json
