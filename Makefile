@@ -6,7 +6,7 @@
 #    By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 23:32:58 by zelhajou          #+#    #+#              #
-#    Updated: 2023/12/21 01:59:56 by zelhajou         ###   ########.fr        #
+#    Updated: 2023/12/23 17:09:56 by zelhajou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJ_DIR = obj
 INC_DIR = include
 
 # Source and Object files
-SRC = $(SRC_DIR)/graphics.c $(SRC_DIR)/main.c
+SRC = $(SRC_DIR)/graphics.c $(SRC_DIR)/main.c  $(SRC_DIR)/events.c $(SRC_DIR)/drawing.c $(SRC_DIR)/coloring.c 
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Compiler and flags
@@ -30,6 +30,7 @@ LIBS = -lmlx -framework OpenGL -framework AppKit
 
 # Compilation rules
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 # Targets
@@ -41,12 +42,11 @@ $(NAME): $(OBJ)
 
 clean:
 	rm -rf $(OBJ_DIR)
-	make -C lib/ft_printf clean
 
 fclean: clean
 	rm -rf $(NAME)
-	make -C lib/ft_printf fclean
 
 re: fclean all
 
 .PHONY: all clean fclean re
+     
