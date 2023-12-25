@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 00:06:53 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/25 21:53:35 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/25 22:07:49 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_setup_window(t_gfx_env *env)
 		free(env->mlx_connextion);
 		exit(1);
 	}
-	env->zoom = 1;
+	env->mouse.zoom = 1;
 	ft_setup_hooks(env);
 	ft_render_fractal(env);
 	mlx_loop(env->mlx_connextion);
