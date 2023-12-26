@@ -6,23 +6,13 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 16:57:43 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/23 20:18:11 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/25 22:15:40 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graphics.h"
 #include "drawing.h"
 #include <math.h>
-
-int	ft_change_color(t_gfx_env *env)
-{
-	int color = rand() % 0xFFFFFF;
-
-    mlx_string_put(env->mlx_connextion, env->mlx_window, 50, 50, color, "Dynamic Text");
-	//mlx_put_image_to_window(env->mlx_connextion, env->mlx_window, env->img_ptr, 0, 0);
-	printf("continuous function\n");
-	return (0);
-}
 
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 {
@@ -31,8 +21,6 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
 	*(unsigned int*)dst = color;
 }
-
-
 
 void ft_put_pixel(t_data *data, int x, int y, int color)
 {
@@ -45,77 +33,51 @@ void ft_put_pixel(t_data *data, int x, int y, int color)
     }
 }
 
-void ft_draw_line(t_data *data, int x0, int y0, int x1, int y1, int color)
+struct s_complex{
+	double real;
+	double imag;
+};
+
+int function(struct s_complex c, struct s_complex z, int max_iterations)
 {
-   int dx = abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
-    int dy = -abs(y1 - y0), sy = y0 < y1 ? 1 : -1; 
-    int err = dx + dy, e2; /* error value e_xy */
-
-    while (1) {
-        ft_put_pixel(data, x0, y0, color);
-        if (x0 == x1 && y0 == y1) break;
-        e2 = 2 * err;
-        if (e2 >= dy) { err += dy; x0 += sx; } /* e_xy+e_x > 0 */
-        if (e2 <= dx) { err += dx; y0 += sy; } /* e_xy+e_y < 0 */
-    }
-}
-
-
-void draw_circle(t_data *data, int color) {
-    t_point center = {rand() % WINDOW_WIDTH,rand() % WINDOW_HEIGHT,};
-	int radius = 50;
-
-
-    int x = radius;
-    int y = 0;
-    int err = 0;
-
-    while (x >= y) {
-        my_mlx_pixel_put(data, center.x + x, center.y + y, color);
-        my_mlx_pixel_put(data, center.x + y, center.y + x, color);
-        my_mlx_pixel_put(data, center.x - y, center.y + x, color);
-        my_mlx_pixel_put(data, center.x - x, center.y + y, color);
-        my_mlx_pixel_put(data, center.x - x, center.y - y, color);
-        my_mlx_pixel_put(data, center.x - y, center.y - x, color);
-        my_mlx_pixel_put(data, center.x + y, center.y - x, color);
-        my_mlx_pixel_put(data, center.x + x, center.y - y, color);
-
-        if (err <= 0) {
-            y += 1;
-            err += 2 * y + 1;
-        }
-        if (err > 0) {
-            x -= 1;
-            err -= 2 * x + 1;
-        }
-    }
+	while (max_iterations)
+	{
+		double r = z.real * z.real - z.imag * z.imag + c.real;
+		double i = 2 * z.real * z.imag + c.imag;
+		z.real = r;
+		z.imag = i;
+		if (z.real * z.real + z.imag * z.imag > 4)
+			return max_iterations;
+		max_iterations--;
+	}
+	return (max_iterations);
 }
 
 
 int	ft_render_fractal(t_gfx_env *env)
 {
 	t_data	img;
-	//  int x, y;
-	int color = rand() % 0xFFFFFF;;
+	int x, y, color = 0;
+	struct s_complex n;
+	struct s_complex c;
 
-	img.img = mlx_new_image(env, WINDOW_HEIGHT, WINDOW_WIDTH);
+	c.real = (env->mouse.x - WINDOW_WIDTH / 2.0) * (4.0 * env->mouse.zoom) / WINDOW_WIDTH;;
+	c.imag = ((WINDOW_HEIGHT - env->mouse.y) - WINDOW_HEIGHT / 2.0) * (4.0 * env->mouse.zoom) / WINDOW_HEIGHT;;
+	// int color = rand() % 0xFFFFFF;
+	img.img = mlx_new_image(&img, WINDOW_HEIGHT, WINDOW_WIDTH);
 	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length,
 								&img.endian);
-	// for (y = 0; y < WINDOW_WIDTH; y++) {
-    //     for (x = 0; x < WINDOW_HEIGHT; x++) {
-	// 		my_mlx_pixel_put(&img, x, y, color);
-    //     }
-    // }
+	// &img.bits_per_pixel, &img.line_length, &img.endian);
 
-	ft_put_pixel(&img, WINDOW_HEIGHT/2, WINDOW_WIDTH/2, color);
-	ft_draw_line(&img, rand() % WINDOW_HEIGHT, rand() % WINDOW_WIDTH, rand() % WINDOW_WIDTH, rand() % WINDOW_HEIGHT, color);
-	draw_circle(&img, color);
-	ft_change_color(env);
-	// mlx_string_put(env->mlx_connextion, env->mlx_window, 100, 100, color, "Dynamic Text");
-	// mlx_put_image_to_window(env->mlx_connextion, env->mlx_window, img.img, 100, 100);
-
-
-	mlx_put_image_to_window(env, env->mlx_window, img.img, 0, 0);
-
+	for (y = 0; y < WINDOW_WIDTH; y++) {
+        for (x = 0; x < WINDOW_HEIGHT; x++) {
+			n.real = (x - WINDOW_WIDTH / 2.0) * (4.0 * env->mouse.zoom) / WINDOW_WIDTH;
+			n.imag = ((WINDOW_HEIGHT - y) - WINDOW_HEIGHT / 2.0) * (4.0 * env->mouse.zoom) / WINDOW_HEIGHT;
+			color = function(c, n, 100);
+			my_mlx_pixel_put(&img, x, y, color * 0x0608F2);
+		}
+	}
+	mlx_put_image_to_window(env->mlx_connextion, env->mlx_window, img.img, 0, 0);
+	//mlx_string_put(env->mlx_connextion, env->mlx_window, 5, 5, 0, "Fractol");
 	return (0);
 }
