@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 16:57:43 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/27 17:32:17 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/27 17:44:23 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,6 @@ double	ft_scale_coordinate_y(t_fractol *fractol, int y)
 	half_height = WINDOW_HEIGHT / 2.0;
 	return (((WINDOW_HEIGHT - y) - half_height)
 		* (4.0 * fractol->zoom) / WINDOW_HEIGHT);
-}
-
-void	ft_setup_fractal_params(t_fractol *fractol)
-{
-	double	half_width;
-	double	half_height;
-
-	half_width = WINDOW_WIDTH / 2.0;
-	half_height = WINDOW_HEIGHT / 2.0;
-	fractol->c.real = (fractol->offset.x - half_width)
-		* (4.0 * fractol->zoom) / WINDOW_WIDTH;
-	fractol->c.imaginary = (half_height - fractol->offset.y)
-		* (4.0 * fractol->zoom) / WINDOW_HEIGHT;
 }
 
 void	ft_draw_fractal_pixel(t_fractol *fractol, int x, int y)
