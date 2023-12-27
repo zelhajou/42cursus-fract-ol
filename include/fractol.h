@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 01:05:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/27 17:07:56 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/27 17:31:50 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,9 @@ double	ft_scale_coordinate_x(t_fractol *fractol, int x);
 void 	ft_draw_fractal_pixel(t_fractol *fractol, int x, int y);
 
 // fractal sets
-int		iterate_fractal(t_complex z, t_complex c, int max_iterations);
-int		calculate_mandelbrot(t_fractol *fractol, int max_iterations);
-int		calculate_julia(t_fractol *fractol, int max_iterations);
+int		ft_iterate_fractal(t_complex z, t_complex c, int max_iterations);
+int		ft_calculate_mandelbrot(t_fractol *fractol, int max_iterations);
+int		ft_calculate_julia(t_fractol *fractol, int max_iterations);
 
 // Events
 int		ft_handle_keypress(int key, t_fractol *fractol);
