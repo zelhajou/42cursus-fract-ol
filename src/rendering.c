@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractal.c                                          :+:      :+:    :+:   */
+/*   rendering.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:26:30 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/27 17:44:32 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/29 00:25:16 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 int	ft_calculate_julia(t_fractol *fractol, int max_iterations)
 {
+	if (fractol->fractal_config.type == 'J')
+	{
+		fractol->c.real = fractol->fractal_config.julia_x;
+		fractol->c.imaginary = fractol->fractal_config.julia_y;
+	}
+	else
+	{
+		fractol->c.real = ft_scale_coordinate_x(fractol, fractol->offset.x);
+		fractol->c.imaginary = ft_scale_coordinate_y(fractol, fractol->offset.y);
+	}
 	return (ft_iterate_fractal(fractol->z, fractol->c, max_iterations));
 }
 
@@ -64,7 +74,6 @@ int	ft_render_fractal(t_fractol *fractol)
 
 	y = 0;
 	ft_setup_fractal_params(fractol);
-	ft_initialize_image(fractol);
 	while (y < WINDOW_WIDTH)
 	{
 		x = 0;
