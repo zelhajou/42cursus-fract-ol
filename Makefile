@@ -6,7 +6,7 @@
 #    By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/19 23:32:58 by zelhajou          #+#    #+#              #
-#    Updated: 2023/12/27 17:28:35 by zelhajou         ###   ########.fr        #
+#    Updated: 2023/12/28 14:59:18 by zelhajou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INC_DIR = include
 
 # Source and Object files
 SRC = $(SRC_DIR)/graphics.c $(SRC_DIR)/main.c $(SRC_DIR)/events.c $(SRC_DIR)/drawing.c \
-		$(SRC_DIR)/fractal.c $(SRC_DIR)/coloring.c
+		$(SRC_DIR)/rendering.c $(SRC_DIR)/coloring.c
 		
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
