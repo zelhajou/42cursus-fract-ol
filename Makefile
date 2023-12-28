@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/19 23:32:58 by zelhajou          #+#    #+#              #
-#    Updated: 2023/12/28 14:59:18 by zelhajou         ###   ########.fr        #
+#    Created: 2023/12/28 22:19:38 by zelhajou          #+#    #+#              #
+#    Updated: 2023/12/28 22:19:47 by zelhajou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ INCLUDES = -I$(INC_DIR)
 LIBS = -lmlx -framework OpenGL -framework AppKit
 
 # Compilation rules
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c include/fractol.h
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
@@ -51,4 +51,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-     
