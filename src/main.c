@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:30:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/27 16:03:34 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/28 15:00:18 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	main(void)
 	ft_setup_hooks(&fractol);
 	ft_render_fractal(&fractol);
 	mlx_loop(fractol.mlx_connextion);
-	mlx_destroy_window(fractol.mlx_connextion, fractol.mlx_window);
-	free(fractol.mlx_connextion);
+	ft_close_window(&fractol);
 	return (0);
 }
