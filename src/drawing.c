@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 16:57:43 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/27 17:44:23 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/28 22:19:15 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,13 @@ void	ft_draw_fractal_pixel(t_fractol *fractol, int x, int y)
 	int	color;
 	int	iterations;
 
+	iterations = 0;
 	fractol->z.real = ft_scale_coordinate_x(fractol, x);
 	fractol->z.imaginary = ft_scale_coordinate_y(fractol, y);
-	iterations = ft_calculate_julia(fractol, fractol->max_iterations);
+	if (fractol->fractal_choice == 1)
+		iterations = ft_calculate_mandelbrot(fractol, fractol->max_iterations);
+	else if (fractol->fractal_choice == 2)
+		iterations = ft_calculate_julia(fractol, fractol->max_iterations);
 	color = ft_determine_color(iterations, fractol->max_iterations);
 	ft_put_pixel_to_image(fractol, x, y, color);
 }
