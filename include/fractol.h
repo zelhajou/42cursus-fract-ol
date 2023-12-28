@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 01:05:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/28 14:57:47 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/28 22:18:36 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@
 # include <mlx.h>
 
 // Window
-# define WINDOW_WIDTH 800
-# define WINDOW_HEIGHT 800
+# define WINDOW_WIDTH 500
+# define WINDOW_HEIGHT 500
+
 // keys
 # define KEY_ESC 53
 # define KEY_LEFT 123
@@ -57,19 +58,28 @@ typedef struct s_point
 	int	y;
 }	t_point;
 
+typedef struct s_fractal_config
+{
+	char	type;
+	double	julia_x;
+	double	julia_y;
+}	t_fractal_config;
+
 typedef struct s_fractol
 {
 	// Window and image info
-	void		*mlx_connextion;
-	void		*mlx_window;
-	t_image		image;
+	void				*mlx_connextion;
+	void				*mlx_window;
+	t_image				image;
 	// complex numbers
-	t_complex	c;
-	t_complex	z;
+	t_complex			c;
+	t_complex			z;
 	// Fractal specific parameters
-	int			max_iterations;
-	double		zoom;
-	t_point		offset;
+	int					max_iterations;
+	double				zoom;
+	t_point				offset;
+	int					fractal_choice;
+	t_fractal_config	fractal_config;
 }	t_fractol;
 
 // Graphics
