@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 16:57:43 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/28 22:19:15 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/29 17:24:59 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_put_pixel_to_image(t_fractol *fractol, int x, int y, int color)
 	}
 }
 
-// Scaling pixel_to_complex
 double	ft_scale_coordinate_x(t_fractol *fractol, int x)
 {
 	double	half_width;
