@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 01:05:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/28 22:18:36 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/29 17:30:28 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # include <mlx.h>
 
 // Window
-# define WINDOW_WIDTH 500
-# define WINDOW_HEIGHT 500
+# define WINDOW_WIDTH 800
+# define WINDOW_HEIGHT 800
 
 // keys
 # define KEY_ESC 53
@@ -82,30 +82,34 @@ typedef struct s_fractol
 	t_fractal_config	fractal_config;
 }	t_fractol;
 
+// fractol configuration
+void	ft_display_message(char *argv[]);
+void	ft_init_fractal(t_fractol *fractol, int argc, char *argv[]);
+
 // Graphics
 void	ft_setup_window(t_fractol *fractol);
 void	ft_init_window(t_fractol *fractol);
-int		ft_close_window(t_fractol *fractol);
 void	ft_initialize_image(t_fractol *fractol);
+int		ft_close_window(t_fractol *fractol);
 
 // Coloring and Drawing
 int		ft_determine_color(int iterations, int max_iterations);
 void	ft_put_pixel_to_image(t_fractol *fractol, int x, int y, int color);
-double	ft_scale_coordinate_y(t_fractol *fractol, int y);
 double	ft_scale_coordinate_x(t_fractol *fractol, int x);
+double	ft_scale_coordinate_y(t_fractol *fractol, int y);
 void	ft_draw_fractal_pixel(t_fractol *fractol, int x, int y);
 
-// Rendring
+// Rendring and fractal sets
 int		ft_render_fractal(t_fractol *fractol);
 void	ft_setup_fractal_params(t_fractol *fractol);
 int		ft_iterate_fractal(t_complex z, t_complex c, int max_iterations);
-
-// fractal sets
 int		ft_calculate_mandelbrot(t_fractol *fractol, int max_iterations);
 int		ft_calculate_julia(t_fractol *fractol, int max_iterations);
 
 // Events
+void	ft_setup_hooks(t_fractol *fractol);
 int		ft_handle_keypress(int key, t_fractol *fractol);
 int		ft_handle_mouse(int button, int x, int y, t_fractol *fractol);
-void	ft_setup_hooks(t_fractol *fractol);
+int		ft_handle_mouse_move(int x, int y, t_fractol *fractol);
+
 #endif
