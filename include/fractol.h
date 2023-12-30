@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 01:05:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/29 17:30:28 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 03:15:19 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <string.h>
 # include <math.h>
 # include <mlx.h>
+# include <limits.h>
+# include <stdbool.h>
 
 // Window
 # define WINDOW_WIDTH 800
@@ -83,7 +85,7 @@ typedef struct s_fractol
 }	t_fractol;
 
 // fractol configuration
-void	ft_display_message(char *argv[]);
+void	ft_display_message(void);
 void	ft_init_fractal(t_fractol *fractol, int argc, char *argv[]);
 
 // Graphics
@@ -111,5 +113,20 @@ void	ft_setup_hooks(t_fractol *fractol);
 int		ft_handle_keypress(int key, t_fractol *fractol);
 int		ft_handle_mouse(int button, int x, int y, t_fractol *fractol);
 int		ft_handle_mouse_move(int x, int y, t_fractol *fractol);
+
+// libft
+void	ft_putstr_fd(char *s, int fd);
+int		ft_atoi(const char *s);
+double	process_fractional_part(const char *str);
+double	ft_atof(const char *str);
+bool	ft_is_digit(char c);
+
+// utils
+bool	ft_validate_atof_input(const char *str);
+void	ft_init_fractal(t_fractol *fractol, int argc, char *argv[]);
+void	initialize_fractal(t_fractol *fractol);
+void	handle_julia_parameters(int argc, char *argv[], t_fractol *fractol);
+void	validate_arguments(int argc, char *argv[], t_fractol *fractol);
+void	ft_display_message(void);
 
 #endif

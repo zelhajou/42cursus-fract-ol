@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 00:06:53 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/29 00:25:34 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/29 20:26:21 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,6 @@ void	ft_init_window(t_fractol *fractol)
 		exit(1);
 }
 
-int	ft_close_window(t_fractol *fractol)
-{
-	mlx_destroy_image(fractol->mlx_connextion, fractol->image.img_ptr);
-	mlx_destroy_window(fractol->mlx_connextion, fractol->mlx_window);
-	exit(EXIT_FAILURE);
-}
-
 void	ft_initialize_image(t_fractol *fractol)
 {
 	fractol->image.img_ptr = mlx_new_image(&fractol->image,
@@ -50,4 +43,11 @@ void	ft_initialize_image(t_fractol *fractol)
 			&fractol->image.endian);
 	if (!fractol->image.addr)
 		ft_close_window(fractol);
+}
+
+int	ft_close_window(t_fractol *fractol)
+{
+	mlx_destroy_image(fractol->mlx_connextion, fractol->image.img_ptr);
+	mlx_destroy_window(fractol->mlx_connextion, fractol->mlx_window);
+	exit(EXIT_FAILURE);
 }
