@@ -23,7 +23,7 @@ Run the program with the following command:
 Replace **[fractal-type]** with either **Julia** or **Mandelbrot** to view the respective fractal set.
 
 ## Explination :
-
+\sum  \because 
 In mathematics, there are many different types of geometry, each exploring shapes and dimensions in unique ways. Among these, fractal geometry is one of the most intriguing.
 
 **Fractal Geometry** deals with shapes that look similar at any scale. This means that if you look at a small part of the shape, you will find it resembles the entire shape. Imagine a tree, where the smaller branches branch out in a way that mimics the whole tree. Fractals are not just beautiful drawings; they are crucial in science and mathematics to understand complex patterns in nature.
@@ -62,6 +62,8 @@ https://www.mathsisfun.com/numbers/complex-numbers.html
 5. If |`z_n`| exceeds 2, `z_0` is not part of the Julia set.
 
 Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represents the complex number obtained after applying the formula to `z_n`.
+
+<img width="520" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/2fbedc75-f234-4b93-8686-6a10ac71b9aa">
 
 
 
