@@ -28,7 +28,8 @@ In mathematics, there are many different types of geometry, each exploring shape
 
 **Fractal Geometry** deals with shapes that look similar at any scale. This means that if you look at a small part of the shape, you will find it resembles the entire shape. Imagine a tree, where the smaller branches branch out in a way that mimics the whole tree. Fractals are not just beautiful drawings; they are crucial in science and mathematics to understand complex patterns in nature.
 
-![Fractal-Tree-02](https://github.com/zelhajou/fractol/assets/39954629/640227c8-133c-4f5d-963d-4daa2cc88858)
+
+<img width="540" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/640227c8-133c-4f5d-963d-4daa2cc88858">
 
 
 Among the most famous fractal sets are the Julia and Mandelbrot sets:
