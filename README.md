@@ -38,6 +38,14 @@ Among the most famous fractal sets are the Julia and Mandelbrot sets:
 
 ### Calculating the Julia and Mandelbrot Sets
 
+### Complex Numbers
+**Complex Numbers** are numbers that combine real and imaginary parts. A complex number is written as `a + bi`, where:
+- `a` is the real part.
+- `bi` is imaginary part.
+- `i` is the imaginary unit, defined as the square root of -1, so `i^2 = -1`.
+
+https://www.mathsisfun.com/numbers/complex-numbers.html
+
 #### Mandelbrot Set:
 1. Choose a complex number `c`.
 2. Start with `z_0 = 0`.
@@ -54,6 +62,9 @@ Among the most famous fractal sets are the Julia and Mandelbrot sets:
 
 Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represents the complex number obtained after applying the formula to `z_n`.
 
+
+
+
 ### Other Types of Geometry in Mathematics
 1. **Euclidean Geometry:** Deals with shapes in flat (2D) or three-dimensional (3D) space.
 2. **Non-Euclidean Geometry:** Includes spherical geometry and hyperbolic geometry.
@@ -64,10 +75,17 @@ Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represen
 
 
 # Mandelbrot sets
-<img width="797" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/fa2a496f-c941-4d1c-97d7-e54136d2b654">
+<img width="320" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/fa2a496f-c941-4d1c-97d7-e54136d2b654">
 
 # Julia sets
 
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| Julia set for fc, c = −0.7269 + 0.1889i <br> ![Julia Set -0.7269 + 0.1889i](https://github.com/zelhajou/fractol/assets/39954629/9967eae3-844c-408c-9048-77c656882f15) | Julia set for fc, c = (φ − 2) + (φ − 1)i = −0.4 + 0.6i <br> ![Julia Set -0.4 + 0.6i](https://github.com/zelhajou/fractol/assets/39954629/bacc447b-0b33-44a8-aaf0-0a158a25ac29) | Julia set for fc, c = 0.35 + 0.35i <br> ![Julia Set 0.35 + 0.35i](https://github.com/zelhajou/fractol/assets/39954629/5ba7b8c7-8a51-40bb-9d88-17d8cb826889) |
+| Julia set for fc, c = 0.285 + 0.01i <br> ![Julia Set 0.285 + 0.01i](https://github.com/zelhajou/fractol/assets/39954629/8edb61b7-d8f1-4535-86f1-bfbb69be863d) | Julia set for fc, c = −0.8 + 0.156i <br> ![Julia Set -0.8 + 0.156i](https://github.com/zelhajou/fractol/assets/39954629/0da1efbb-f0a8-40b4-b381-cc7fdf2ecc25) | Julia set for fc, c = 0.4 + 0.4i <br> ![Julia Set 0.4 + 0.4i](https://github.com/zelhajou/fractol/assets/39954629/5662bcc7-c743-47af-8684-e5b15b571a20) |
+| Julia set for fc, c = −0.835 − 0.2321i <br> ![Julia Set -0.835 - 0.2321i](https://github.com/zelhajou/fractol/assets/39954629/843ff757-c0fa-40eb-b386-9f15ca9461d3) | Julia set for fc, c = 0.285 + 0i <br> ![Julia Set 0.285 + 0i](https://github.com/zelhajou/fractol/assets/39954629/ddd6896e-dfae-4f22-bee3-71eba91003c7) | |
+
+<!--
 Julia set for fc, vc = −0.7269 + 0.1889i
 
 <img width="787" alt="Screen Shot 2023-12-29 at 11 44 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/9967eae3-844c-408c-9048-77c656882f15">
@@ -100,5 +118,5 @@ Julia set for fc, c = 0.285 + 0i
 
 <img width="796" alt="Screen Shot 2023-12-29 at 5 09 31 PM" src="https://github.com/zelhajou/fractol/assets/39954629/ddd6896e-dfae-4f22-bee3-71eba91003c7">
 
-
+-->
 
