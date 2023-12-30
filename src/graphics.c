@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 00:06:53 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/29 20:26:21 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 15:46:57 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_init_window(t_fractol *fractol)
 	if (!fractol->mlx_connextion)
 		exit(1);
 	fractol->mlx_window = mlx_new_window(fractol->mlx_connextion,
-			WINDOW_HEIGHT, WINDOW_WIDTH, "Fractol");
+			WINDOW_HEIGHT, WINDOW_WIDTH, "Fract'ol");
 	if (!fractol->mlx_window)
 		exit(1);
 }

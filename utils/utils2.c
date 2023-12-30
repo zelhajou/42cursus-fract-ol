@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 03:04:44 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 03:18:28 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 15:43:40 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ void	validate_arguments(int argc, char *argv[], t_fractol *fractol)
 		ft_putstr_fd("Error: Invalid fractal number. Choose 1 or 2.\n", 2);
 		ft_display_message();
 	}
+	if (fractol->fractal_choice == 1 && argc != 2)
+	{
+		ft_putstr_fd("Error: Invalid number of arguments for Mandelbrot.\n", 2);
+		ft_putstr_fd("Usage: ./fractol mandelbrot\n", 1);
+		exit(EXIT_FAILURE);
+	}
 }
 
 void	handle_julia_parameters(int argc, char *argv[], t_fractol *fractol)
@@ -53,14 +59,12 @@ void	handle_julia_parameters(int argc, char *argv[], t_fractol *fractol)
 	{
 		ft_putstr_fd("Error: Invalid number of arguments for Julia.\n", 2);
 		ft_putstr_fd("Usage: ./fractol julia [julia parameters]\n", 1);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 }
 
 void	initialize_fractal(t_fractol *fractol)
 {
-	fractol->offset.x = 0;
-	fractol->offset.y = 0;
 	fractol->zoom = 1;
 	fractol->max_iterations = 100;
 }

@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:26:30 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/29 21:26:54 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 14:45:31 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,26 +49,12 @@ int	ft_iterate_fractal(t_complex z, t_complex c, int max_iterations)
 	return (iterations);
 }
 
-void	ft_setup_fractal_params(t_fractol *fractol)
-{
-	double	half_width;
-	double	half_height;
-
-	half_width = WINDOW_WIDTH / 2.0;
-	half_height = WINDOW_HEIGHT / 2.0;
-	fractol->c.real = (fractol->offset.x - half_width)
-		* (4.0 * fractol->zoom) / WINDOW_WIDTH;
-	fractol->c.imaginary = (half_height - fractol->offset.y)
-		* (4.0 * fractol->zoom) / WINDOW_HEIGHT;
-}
-
 int	ft_render_fractal(t_fractol *fractol)
 {
 	int	x;
 	int	y;
 
 	y = 0;
-	ft_setup_fractal_params(fractol);
 	while (y < WINDOW_WIDTH)
 	{
 		x = 0;
