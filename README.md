@@ -91,19 +91,15 @@ Consider the set of **even numbers**: `S = {...,-2,0,2,4,6,...}`, **negative num
 ### Mandelbrot Set:
 The set of all numbers (c) for which the sequence `Z_n` remains small according to this formula:<br>
 <img width="200" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/f268e9e5-0cd7-4b21-8122-79dabaa90afa"><br>
-Example 1: Is the number 1 part of the set? `c = 1`<br>
-<!--
-![ezgif com-video-to-gif-converter](https://github.com/zelhajou/fractol/assets/39954629/0c9e31bc-7f7a-4874-ac43-4c98c8dcefec) <br>
--->
-https://github.com/zelhajou/fractol/assets/39954629/d836f2ce-ebbb-4867-8bb2-cdf456f029b8
 
+Example 1: Is the number 1 part of the set? `c = 1`<br>
+
+https://github.com/zelhajou/fractol/assets/39954629/d836f2ce-ebbb-4867-8bb2-cdf456f029b8
 
 Is Z staying small: NO its getting big its getting very fast so is the number 1 part of the Mandelbrot set. answer is NO <br>
 
 Example 2: Is the number -1 part of the set? `c = -1`<br>
-<!--
-![ezgif com-video-to-gif-converter (1)](https://github.com/zelhajou/fractol/assets/39954629/a2862c26-5b48-4433-a23f-dc718192535f)
--->
+
 https://github.com/zelhajou/fractol/assets/39954629/0eb2cee3-49ff-44ef-9b6b-494f722977e8
 
 The Mandelbrot set also includes the **complex** and **imaginary** numbers<br>
@@ -125,19 +121,30 @@ The Mandelbrot set also includes the **complex** and **imaginary** numbers<br>
 
 https://www.mathsisfun.com/numbers/complex-numbers.html
 
+| | |
+|:-------------------------:|:-------------------------:|
+ <img width="838" alt="Screen Shot 2023-12-31 at 3 31 04 AM" src="https://github.com/zelhajou/fractol/assets/39954629/321a1bab-aac5-4997-aa63-97b1b25a2e8a"> | <img width="835" alt="Screen Shot 2023-12-31 at 3 32 49 AM" src="https://github.com/zelhajou/fractol/assets/39954629/69a7aa6d-95c1-42ab-b913-7d0b23868b84">
+| | |
+
+<div align="center">
+<img width="500" alt="Screen Shot 2023-12-31 at 3 41 21 AM" src="https://github.com/zelhajou/fractol/assets/39954629/625f5406-fbf3-473f-8afd-cbdf72649a5e">
+</div>
+
+- Black: belnog to the mandelbrot set<br>
+- Color: they dont
+  - Shade: if the sequence of Z gets really big really fast
+  - brighter: if Z gets big but it does so slowly 
 
 ## Calculating the Julia and Mandelbrot Sets
 
-
-
-#### Mandelbrot Set:
+### Mandelbrot Set:
 1. Choose a complex number `c`.
 2. Start with `z_0  = 0`.
 3. Repeatedly apply the formula: `z_{n+1} = z_n^2 + c`.
 4. If the magnitude of `z_n` (|`z_n`|) remains less than or equal to 2 after many iterations, then `c` is part of the Mandelbrot set.
 5. If |`z_n`| exceeds 2 at any step, `c` is not part of the Mandelbrot set.
 
-#### Julia Set Calculation:
+### Julia Set Calculation:
 1. Choose a fixed complex number `c`.
 2. Choose `z_0` as your starting point.
 3. Repeatedly apply the formula: `z_{n+1} = z_n^2 + c`.
