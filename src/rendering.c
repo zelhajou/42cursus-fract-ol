@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:26:30 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 14:45:31 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/31 17:44:17 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ int	ft_calculate_julia(t_fractol *fractol, int max_iterations)
 {
 	if (fractol->fractal_config.type == 'J')
 	{
-		fractol->c.real = fractol->fractal_config.julia_x;
-		fractol->c.imaginary = fractol->fractal_config.julia_y;
+		fractol->cst.real = fractol->fractal_config.julia_x;
+		fractol->cst.imaginary = fractol->fractal_config.julia_y;
 	}
-	return (ft_iterate_fractal(fractol->z, fractol->c, max_iterations));
+	return (ft_iterate_fractal(fractol->pixel, fractol->cst, max_iterations));
 }
 
 int	ft_calculate_mandelbrot(t_fractol *fractol, int max_iterations)
 {
-	fractol->c.real = 0;
-	fractol->c.imaginary = 0;
-	return (ft_iterate_fractal(fractol->c, fractol->z, max_iterations));
+	fractol->cst.real = 0;
+	fractol->cst.imaginary = 0;
+	return (ft_iterate_fractal(fractol->cst, fractol->pixel, max_iterations));
 }
 
 int	ft_iterate_fractal(t_complex z, t_complex c, int max_iterations)
