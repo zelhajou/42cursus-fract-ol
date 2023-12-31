@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 01:05:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 22:33:18 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/31 16:34:40 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ typedef struct s_fractol
 	void				*mlx_window;
 	t_image				image;
 	// complex numbers
-	t_complex			c;
-	t_complex			z;
+	t_complex			cst;
+	t_complex			pixel;
 	// Fractal specific parameters
 	int					max_iterations;
 	double				zoom;
