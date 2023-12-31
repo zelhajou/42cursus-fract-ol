@@ -144,6 +144,8 @@ https://www.mathsisfun.com/numbers/complex-numbers.html
 4. If the magnitude of `z_n` (|`z_n`|) remains less than or equal to 2 after many iterations, then `c` is part of the Mandelbrot set.
 5. If |`z_n`| exceeds 2 at any step, `c` is not part of the Mandelbrot set.
 
+https://www.geogebra.org/m/jcpvtkhz
+
 ### Julia Set Calculation:
 1. Choose a fixed complex number `c`.
 2. Choose `z_0` as your starting point.
