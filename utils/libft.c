@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 20:31:13 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 22:33:46 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/31 15:55:31 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,6 @@ double	ft_atof(const char *str)
 	double	fractional_part;
 
 	sign = 1;
-	fractional_part = 0.0;
 	fractional_part = 0.0;
 	if (*str == '-')
 	{
