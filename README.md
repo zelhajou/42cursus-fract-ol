@@ -22,65 +22,11 @@ Run the program with the following command:
 ```
 Replace **[fractal-type]** with either **Julia** or **Mandelbrot** to view the respective fractal set.
 
-## Explination :
-In mathematics, there are many different types of geometry, each exploring shapes and dimensions in unique ways. Among these, fractal geometry is one of the most intriguing.
-
-**[Fractal Geometry](https://youtu.be/jMqgJOr0veo?list=LL)** deals with shapes that look similar at any scale. This means that if you look at a small part of the shape, you will find it resembles the entire shape. Imagine a tree, where the smaller branches branch out in a way that mimics the whole tree. Fractals are not just beautiful drawings; they are crucial in science and mathematics to understand complex patterns in nature.
-
-<img width="540" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/640227c8-133c-4f5d-963d-4daa2cc88858">
-
-
-Among the most famous fractal sets are the Julia and Mandelbrot sets:
-
-- **Julia Set:** Known for its complexity and beauty, it consists of points that generate complex fractal shapes when certain mathematical operations are applied to them.
-- **Mandelbrot Set:** Recognized for its distinctive shape, it is a complex example of fractals, representing a set of points in the mathematical space that exhibit repeating patterns when magnified.
-
-### Calculating the Julia and Mandelbrot Sets
-
-### Complex Numbers
-**Complex Numbers** are numbers that combine real and imaginary parts. A complex number is written as `a + bi`, where:
-- `a` is the real part.
-- `bi` is imaginary part.
-- `i` is the imaginary unit, defined as the square root of -1, so `i^2 = -1`.
-
-![complex-plane-3-4i](https://github.com/zelhajou/fractol/assets/39954629/b9c7237f-109c-4f24-a4b4-593d273eabb1)
-
-https://www.mathsisfun.com/numbers/complex-numbers.html
-
-#### Mandelbrot Set:
-1. Choose a complex number `c`.
-2. Start with `z_0 = 0`.
-3. Repeatedly apply the formula: `z_{n+1} = z_n^2 + c`.
-4. If the magnitude of `z_n` (|`z_n`|) remains less than or equal to 2 after many iterations, then `c` is part of the Mandelbrot set.
-5. If |`z_n`| exceeds 2 at any step, `c` is not part of the Mandelbrot set.
-
-#### Julia Set Calculation:
-1. Choose a fixed complex number `c`.
-2. Choose `z_0` as your starting point.
-3. Repeatedly apply the formula: `z_{n+1} = z_n^2 + c`.
-4. If the magnitude of `z_n` (|`z_n`|) stays less than or equal to 2 after many iterations, then `z_0` is part of the Julia set.
-5. If |`z_n`| exceeds 2, `z_0` is not part of the Julia set.
-
-Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represents the complex number obtained after applying the formula to `z_n`.
-
-<img width="520" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/2fbedc75-f234-4b93-8686-6a10ac71b9aa">
-
-
-
-
-### Other Types of Geometry in Mathematics
-1. **Euclidean Geometry:** Deals with shapes in flat (2D) or three-dimensional (3D) space.
-2. **Non-Euclidean Geometry:** Includes spherical geometry and hyperbolic geometry.
-3. **Analytic Geometry:** Uses coordinates and equations to describe shapes.
-4. **Algebraic Geometry:** Studies shapes using algebra.
-5. **Topological Geometry:** Deals with shapes in higher dimensions and complex spaces.
-6. **Differential Geometry:** Uses calculus to study geometric properties.
-
-
-# Mandelbrot sets
+## Screenshot
+### Mandelbrot sets
 <img width="320" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/fa2a496f-c941-4d1c-97d7-e54136d2b654">
 
-# Julia sets
+### Julia sets
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
@@ -122,4 +68,93 @@ Julia set for fc, c = 0.285 + 0i
 <img width="796" alt="Screen Shot 2023-12-29 at 5 09 31 PM" src="https://github.com/zelhajou/fractol/assets/39954629/ddd6896e-dfae-4f22-bee3-71eba91003c7">
 
 -->
+
+## Explination
+In mathematics, there are many different types of geometry, each exploring shapes and dimensions in unique ways. Among these, fractal geometry is one of the most intriguing.
+
+**[Fractal Geometry](https://youtu.be/jMqgJOr0veo?list=LL)** deals with shapes that look similar at any scale. This means that if you look at a small part of the shape, you will find it resembles the entire shape. Imagine a tree, where the smaller branches branch out in a way that mimics the whole tree. Fractals are not just beautiful drawings; they are crucial in science and mathematics to understand complex patterns in nature.
+
+<img width="540" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/640227c8-133c-4f5d-963d-4daa2cc88858">
+
+
+Among the most famous fractal sets are the Julia and Mandelbrot sets:
+
+- **Julia Set:** Known for its complexity and beauty, it consists of points that generate complex fractal shapes when certain mathematical operations are applied to them.
+- **Mandelbrot Set:** Recognized for its distinctive shape, it is a complex example of fractals, representing a set of points in the mathematical space that exhibit repeating patterns when magnified.
+---
+### Set
+Set is a collection of elements with a common defined property.
+
+In most sets, some numbers are *included* while others are *excluded*.<br>
+Consider the set of **even numbers**: `S = {...,-2,0,2,4,6,...}`, **negative numbers**: `S = {...,-3,-2,-1,-1,-1/2,-1/4,...}` <br>
+
+### Mandelbrot Set:
+The set of all numbers (c) for which the sequence `Z_n` remains small according to this formula:<br>
+<img width="200" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/f268e9e5-0cd7-4b21-8122-79dabaa90afa"><br>
+Example 1: Is the number 1 part of the set? `c = 1`<br>
+<!--
+![ezgif com-video-to-gif-converter](https://github.com/zelhajou/fractol/assets/39954629/0c9e31bc-7f7a-4874-ac43-4c98c8dcefec) <br>
+-->
+https://github.com/zelhajou/fractol/assets/39954629/d836f2ce-ebbb-4867-8bb2-cdf456f029b8
+
+
+Is Z staying small: NO its getting big its getting very fast so is the number 1 part of the Mandelbrot set. answer is NO <br>
+
+Example 2: Is the number -1 part of the set? `c = -1`<br>
+<!--
+![ezgif com-video-to-gif-converter (1)](https://github.com/zelhajou/fractol/assets/39954629/a2862c26-5b48-4433-a23f-dc718192535f)
+-->
+https://github.com/zelhajou/fractol/assets/39954629/0eb2cee3-49ff-44ef-9b6b-494f722977e8
+
+The Mandelbrot set also includes the **complex** and **imaginary** numbers<br>
+```
+[+]² = [+]
+[-]² = [+]
+0² = 0
+
+[i]² = [-] : not positive not negative and not zero : that's an imaginary number
+```
+#### Complex Numbers
+
+*Complex Numbers* are numbers that combine *real* and *imaginary* parts. A complex number is written as `a + bi`, where:
+- `a` is the real part.
+- `bi` is an imaginary part.
+- `i` is the imaginary unit, defined as the square root of -1, so `i^2 = -1`.
+
+![complex-plane-3-4i](https://github.com/zelhajou/fractol/assets/39954629/b9c7237f-109c-4f24-a4b4-593d273eabb1)
+
+https://www.mathsisfun.com/numbers/complex-numbers.html
+
+
+## Calculating the Julia and Mandelbrot Sets
+
+
+
+#### Mandelbrot Set:
+1. Choose a complex number `c`.
+2. Start with `z_0  = 0`.
+3. Repeatedly apply the formula: `z_{n+1} = z_n^2 + c`.
+4. If the magnitude of `z_n` (|`z_n`|) remains less than or equal to 2 after many iterations, then `c` is part of the Mandelbrot set.
+5. If |`z_n`| exceeds 2 at any step, `c` is not part of the Mandelbrot set.
+
+#### Julia Set Calculation:
+1. Choose a fixed complex number `c`.
+2. Choose `z_0` as your starting point.
+3. Repeatedly apply the formula: `z_{n+1} = z_n^2 + c`.
+4. If the magnitude of `z_n` (|`z_n`|) stays less than or equal to 2 after many iterations, then `z_0` is part of the Julia set.
+5. If |`z_n`| exceeds 2, `z_0` is not part of the Julia set.
+
+Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represents the complex number obtained after applying the formula to `z_n`.
+
+<img width="520" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/2fbedc75-f234-4b93-8686-6a10ac71b9aa">
+
+### Other Types of Geometry in Mathematics
+1. **Euclidean Geometry:** Deals with shapes in flat (2D) or three-dimensional (3D) space.
+2. **Non-Euclidean Geometry:** Includes spherical geometry and hyperbolic geometry.
+3. **Analytic Geometry:** Uses coordinates and equations to describe shapes.
+4. **Algebraic Geometry:** Studies shapes using algebra.
+5. **Topological Geometry:** Deals with shapes in higher dimensions and complex spaces.
+6. **Differential Geometry:** Uses calculus to study geometric properties.
+
+
 
