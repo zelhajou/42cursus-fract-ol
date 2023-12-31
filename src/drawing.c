@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 16:57:43 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 22:38:20 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/31 17:56:55 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,21 @@ void	ft_put_pixel_to_image(t_fractol *fractol, int x, int y, int color)
 
 double	ft_scale_coordinate_x(t_fractol *fractol, int x)
 {
-	double	half_width;
+	double	center_x;
 
-	half_width = WINDOW_WIDTH / 2.0;
-	return ((x - half_width) * (4.0 * fractol->zoom) / WINDOW_WIDTH);
+	center_x = WINDOW_WIDTH / 2.0;
+	return ((x - center_x) * (4.0 * fractol->zoom) / WINDOW_WIDTH);
 }
 
 double	ft_scale_coordinate_y(t_fractol *fractol, int y)
 {
-	double	half_height;
+	double	center_y;
+	double	inverted_y;
 
-	half_height = WINDOW_HEIGHT / 2.0;
-	return (((WINDOW_HEIGHT - y) - half_height)
-		* (4.0 * fractol->zoom) / WINDOW_HEIGHT);
+	center_y = WINDOW_HEIGHT / 2.0;
+	inverted_y = WINDOW_HEIGHT - y;
+	y = inverted_y - center_y;
+	return (y * (4.0 * fractol->zoom) / WINDOW_HEIGHT);
 }
 
 void	ft_draw_fractal_pixel(t_fractol *fractol, int x, int y)
@@ -47,8 +49,8 @@ void	ft_draw_fractal_pixel(t_fractol *fractol, int x, int y)
 	int	iterations;
 
 	iterations = 0;
-	fractol->z.real = ft_scale_coordinate_x(fractol, x);
-	fractol->z.imaginary = ft_scale_coordinate_y(fractol, y);
+	fractol->pixel.real = ft_scale_coordinate_x(fractol, x);
+	fractol->pixel.imaginary = ft_scale_coordinate_y(fractol, y);
 	if (fractol->fractal_choice == 1)
 		iterations = ft_calculate_mandelbrot(fractol, fractol->max_iterations);
 	else if (fractol->fractal_choice == 2)
