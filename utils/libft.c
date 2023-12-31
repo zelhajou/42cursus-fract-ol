@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 20:31:13 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 02:24:59 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 22:33:46 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_atoi(const char *str)
 	return (sign * res);
 }
 
-double	process_fractional_part(const char *str)
+double	ft_process_fractional_part(const char *str)
 {
 	double	fractional_part;
 	int		divisor_for_fraction;
@@ -101,7 +101,7 @@ double	ft_atof(const char *str)
 	if (*str == '.')
 	{
 		str++;
-		fractional_part = process_fractional_part(str);
+		fractional_part = ft_process_fractional_part(str);
 	}
 	return (sign * (integer_part + fractional_part));
 }

@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 01:05:50 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 03:15:19 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 22:33:18 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,16 +117,16 @@ int		ft_handle_mouse_move(int x, int y, t_fractol *fractol);
 // libft
 void	ft_putstr_fd(char *s, int fd);
 int		ft_atoi(const char *s);
-double	process_fractional_part(const char *str);
+double	ft_process_fractional_part(const char *str);
 double	ft_atof(const char *str);
 bool	ft_is_digit(char c);
 
 // utils
 bool	ft_validate_atof_input(const char *str);
 void	ft_init_fractal(t_fractol *fractol, int argc, char *argv[]);
-void	initialize_fractal(t_fractol *fractol);
-void	handle_julia_parameters(int argc, char *argv[], t_fractol *fractol);
-void	validate_arguments(int argc, char *argv[], t_fractol *fractol);
+void	ft_initialize_fractal(t_fractol *fractol);
+void	ft_handle_julia_parameters(int argc, char *argv[], t_fractol *fractol);
+void	ft_validate_arguments(int argc, char *argv[], t_fractol *fractol);
 void	ft_display_message(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 03:04:44 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/30 15:43:40 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/30 22:34:27 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_display_message(void)
 	exit(0);
 }
 
-void	validate_arguments(int argc, char *argv[], t_fractol *fractol)
+void	ft_validate_arguments(int argc, char *argv[], t_fractol *fractol)
 {
 	if (argc < 2 || argc > 4)
 		ft_display_message();
@@ -39,7 +39,7 @@ void	validate_arguments(int argc, char *argv[], t_fractol *fractol)
 	}
 }
 
-void	handle_julia_parameters(int argc, char *argv[], t_fractol *fractol)
+void	ft_handle_julia_parameters(int argc, char *argv[], t_fractol *fractol)
 {
 	if (argc == 4)
 	{
@@ -63,7 +63,7 @@ void	handle_julia_parameters(int argc, char *argv[], t_fractol *fractol)
 	}
 }
 
-void	initialize_fractal(t_fractol *fractol)
+void	ft_initialize_fractal(t_fractol *fractol)
 {
 	fractol->zoom = 1;
 	fractol->max_iterations = 100;
@@ -71,8 +71,8 @@ void	initialize_fractal(t_fractol *fractol)
 
 void	ft_init_fractal(t_fractol *fractol, int argc, char *argv[])
 {
-	validate_arguments(argc, argv, fractol);
-	initialize_fractal(fractol);
+	ft_validate_arguments(argc, argv, fractol);
+	ft_initialize_fractal(fractol);
 	if (fractol->fractal_choice == 2)
-		handle_julia_parameters(argc, argv, fractol);
+		ft_handle_julia_parameters(argc, argv, fractol);
 }
