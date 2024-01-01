@@ -20,7 +20,7 @@ Run the program with the following command:
 ```c
 ./fractol [fractal-type]
 ```
-Replace **[fractal-type]** with either **Julia** or **Mandelbrot** to view the respective fractal set.
+Replace **[fractal-type]** with either `1` **Mandelbrot** or `2` **Julia**  to view the respective fractal set.
 
 ## Screenshot
 ### Mandelbrot sets
