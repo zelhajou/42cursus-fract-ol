@@ -91,6 +91,8 @@ Consider the set of **even numbers**: `S = {...,-2,0,2,4,6,...}`, **negative num
 ### Mandelbrot Set:
 The set of all numbers (c) for which the sequence `Z_n` remains small according to this formula:<br>
 <img width="200" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/f268e9e5-0cd7-4b21-8122-79dabaa90afa"><br>
+<img width="200" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/b0d0e2a0-d0b4-43c0-a8b1-d9ce744a01e7"><br>
+
 
 Example 1: Is the number 1 part of the set? `c = 1`<br>
 
@@ -110,6 +112,8 @@ The Mandelbrot set also includes the **complex** and **imaginary** numbers<br>
 
 [i]² = [-] : not positive not negative and not zero : that's an imaginary number
 ```
+https://plus.maths.org/content/what-mandelbrot-set
+
 #### Complex Numbers
 
 *Complex Numbers* are numbers that combine *real* and *imaginary* parts. A complex number is written as `a + bi`, where:
