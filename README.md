@@ -161,6 +161,7 @@ Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represen
 
 <img width="520" alt="Screen Shot 2023-12-29 at 4 09 18 PM" src="https://github.com/zelhajou/fractol/assets/39954629/2fbedc75-f234-4b93-8686-6a10ac71b9aa">
 
+<!--
 ### Other Types of Geometry in Mathematics
 1. **Euclidean Geometry:** Deals with shapes in flat (2D) or three-dimensional (3D) space.
 2. **Non-Euclidean Geometry:** Includes spherical geometry and hyperbolic geometry.
@@ -168,6 +169,6 @@ Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represen
 4. **Algebraic Geometry:** Studies shapes using algebra.
 5. **Topological Geometry:** Deals with shapes in higher dimensions and complex spaces.
 6. **Differential Geometry:** Uses calculus to study geometric properties.
-
+-->
 
 
