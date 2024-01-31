@@ -171,4 +171,58 @@ Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represen
 6. **Differential Geometry:** Uses calculus to study geometric properties.
 -->
 
+## Resources
 
+### Learn about Fractals
+#### Youtube:
+- [How to Generate Fractals?](https://www.youtube.com/watch?v=wUlVFYJIUNA) ⭐️
+- [The Mandelbrot Set - Numberphile](https://www.youtube.com/watch?v=NGMRB4O922I&list=LL&index=4&pp=gAQBiAQB) ⭐️
+- [The Mandelbrot Set](https://youtu.be/MwjsO6aniig) ⭐️
+- [The Secret Code of Creation - Dr. Jason Lisle](https://www.youtube.com/watch?v=kEyPWJVYp84&list=LL&index=3&pp=gAQBiAQB) ⭐️
+---
+[3Blue1Brown](https://www.youtube.com/@3blue1brown) :
+- [From Newton’s method to Newton’s fractal (which Newton knew nothing about)](https://www.youtube.com/watch?v=-RdOwhmqP5s&list=PLzjH3XFHoi6jLQagfMWJzauYerJvcX4ak&index=1&t=118s&pp=gAQBiAQB)
+- [Beyond the Mandelbrot set, an intro to holomorphic dynamics](https://www.youtube.com/watch?v=LqbZpur38nw&list=PLzjH3XFHoi6jLQagfMWJzauYerJvcX4ak&index=2&t=145s&pp=gAQBiAQB)
+---
+- [What is fractal geometry? │ The History of Mathematics with Luc de Brabandère](https://www.youtube.com/watch?v=jMqgJOr0veo&list=LL&index=11&pp=gAQBiAQB)
+-  [What Is A Fractal (and what are they good for)?](https://www.youtube.com/watch?v=WFtTdf3I6Ug&list=LL&index=10&t=2s&pp=gAQBiAQB)
+- [The Beauty of Fractal Geometry (#SoME2)](https://www.youtube.com/watch?v=YkApFcYsP30&list=LL&index=7&t=224s&pp=gAQBiAQB)
+- [This SHAPE will change the WORLD !](https://www.youtube.com/watch?v=51dFGX5g4So)
+---
+**Others**:
+- [How fractals can help you understand the universe | BBC Ideas](https://www.youtube.com/watch?v=w_MNQBWQ5DI&list=LL&index=6&pp=gAQBiAQB)
+- [The complex geometry of Islamic design - Eric Broug](https://www.youtube.com/watch?v=pg1NpMmPv48&list=LL&index=2&pp=gAQBiAQB)
+- [Turning Math Into Art With Beautiful Fractals](https://www.youtube.com/watch?v=dzymDsEUjKA&list=LL&index=8&t=258s&pp=gAQBiAQB)
+
+### Understand MiniLibX
+**42 Docs**:
+- https://harm-smits.github.io/42docs/libs/minilibx
+---
+**Github Library**:
+- https://github.com/42Paris/minilibx-linux  
+- https://github.com/codam-coding-college/MLX42
+---
+**Gitbook**
+- https://42-cursus.gitbook.io/guide/minilibx/minilibx-helper-function
+---
+**Resources**:
+- https://qst0.github.io/ft_libgfx/man_mlx.html ⭐️
+- https://gontjarow.github.io/MiniLibX/mlx-tutorial-create-image.html ⭐️ 
+- [Pixel drawing with the minilibx](https://aurelienbrabant.fr/blog/pixel-drawing-with-the-minilibx)
+
+**Video**:
+- [Introduction to the minilibX : a simple X-Window programming API in C](https://www.youtube.com/watch?v=bYS93r6U0zg)
+github explination: https://github.com/suspectedoceano/mlx/tree/main/mlx_explained
+video blog : https://medium.com/@jalal92/understanding-the-minilibx-a-practical-dive-into-x-window-programming-api-in-c-cb8a6f72bec3
+video resources: 
+https://x.org/wiki/
+https://www.x.org/releases/current/doc/libX11/libX11/libX11.html
+
+### Render Julia and Mandelbrot Sets
+**Resources :**
+- https://fractalfoundation.org/OFC/OFC-5-5.html
+- [fract-ol: creating graphically beautiful fractals](https://medium.com/@leogaudin/fract-ol-creating-graphically-beautiful-fractals-6664b6b045b5)
+- https://medium.com/@jalal92/fractol-22a21a1ad5bd
+
+**video**:
+- [fractol: render beautiful fractals in C (mandelbrot and julia set)](https://www.youtube.com/watch?v=ANLW1zYbLcs&list=PLzjH3XFHoi6jLQagfMWJzauYerJvcX4ak&index=4&t=5s&pp=gAQBiAQB)
