@@ -69,7 +69,7 @@ Julia set for fc, c = 0.285 + 0i
 
 -->
 
-## Explination
+## Explanation
 In mathematics, there are many different types of geometry, each exploring shapes and dimensions in unique ways. Among these, fractal geometry is one of the most intriguing.
 
 **[Fractal Geometry](https://youtu.be/jMqgJOr0veo?list=LL)** deals with shapes that look similar at any scale. This means that if you look at a small part of the shape, you will find it resembles the entire shape. Imagine a tree, where the smaller branches branch out in a way that mimics the whole tree. Fractals are not just beautiful drawings; they are crucial in science and mathematics to understand complex patterns in nature.
