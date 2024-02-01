@@ -212,11 +212,15 @@ Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represen
 
 **Video**:
 - [Introduction to the minilibX : a simple X-Window programming API in C](https://www.youtube.com/watch?v=bYS93r6U0zg)
+
 github explination: https://github.com/suspectedoceano/mlx/tree/main/mlx_explained
+
 video blog : https://medium.com/@jalal92/understanding-the-minilibx-a-practical-dive-into-x-window-programming-api-in-c-cb8a6f72bec3
-video resources: 
-https://x.org/wiki/
-https://www.x.org/releases/current/doc/libX11/libX11/libX11.html
+
+video resources:
+
+- https://x.org/wiki/
+- https://www.x.org/releases/current/doc/libX11/libX11/libX11.html
 
 ### Render Julia and Mandelbrot Sets
 **Resources :**
