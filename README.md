@@ -179,6 +179,7 @@ Note: In these formulas, `z_n` and c are complex numbers, and `z_{n+1}` represen
 - [The Mandelbrot Set - Numberphile](https://www.youtube.com/watch?v=NGMRB4O922I&list=LL&index=4&pp=gAQBiAQB) ⭐️
 - [The Mandelbrot Set](https://youtu.be/MwjsO6aniig) ⭐️
 - [The Secret Code of Creation - Dr. Jason Lisle](https://www.youtube.com/watch?v=kEyPWJVYp84&list=LL&index=3&pp=gAQBiAQB) ⭐️
+- [Geometer Explains One Concept in 5 Levels of Difficulty | WIRED](https://youtu.be/ofFLYfUEPVE)
 ---
 [3Blue1Brown](https://www.youtube.com/@3blue1brown) :
 - [From Newton’s method to Newton’s fractal (which Newton knew nothing about)](https://www.youtube.com/watch?v=-RdOwhmqP5s&list=PLzjH3XFHoi6jLQagfMWJzauYerJvcX4ak&index=1&t=118s&pp=gAQBiAQB)
